@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google Drive Screenshoter", "Google Drive Screenshoter\Google Drive Screenshoter.csproj", "{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Screenshoter Setup", "Screenshoter Setup\Screenshoter Setup.vdproj", "{0E5F40B3-CCFE-4F27-94F9-E074BBF384C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5F40B3-CCFE-4F27-94F9-E074BBF384C2}.Debug|Any CPU.ActiveCfg = Debug
+		{0E5F40B3-CCFE-4F27-94F9-E074BBF384C2}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFCCD5E-B12C-45D5-9B5A-F6922FB540CC}
+	EndGlobalSection
+EndGlobal
