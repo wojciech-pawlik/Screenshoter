@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Google_Drive_Screenshoter.Properties;
 using System.Windows;
 
 namespace Google_Drive_Screenshoter
@@ -13,5 +8,9 @@ namespace Google_Drive_Screenshoter
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            Settings.Default.Save();
+        }
     }
 }

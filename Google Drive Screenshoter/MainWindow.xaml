@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Google_Drive_Screenshoter"
         mc:Ignorable="d"
-        Title="Google Drive Screenshoter" Height="450" Width="800">
+        Title="Google Drive Screenshoter" Height="400" Width="600"
+        ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="{x:Type RowDefinition}">
             <!--<Setter Property="Height"
@@ -13,7 +14,7 @@
         </Style>
         <Style TargetType="Grid">
             <Setter Property="Background"
-                    Value="LightYellow"/>
+                    Value="MidnightBlue"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -25,6 +26,8 @@
                         Value="Center"/>
                 <Setter Property="HorizontalAlignment"
                         Value="Center"/>
+                <Setter Property="Foreground"
+                        Value="WhiteSmoke"/>
             </Style>
             <Style TargetType="{x:Type Button}">
                 <Setter Property="Padding"
@@ -33,6 +36,12 @@
                         Value="Center"/>
                 <Setter Property="HorizontalAlignment"
                         Value="Center"/>
+                <Setter Property="MinWidth"
+                        Value="100"/>
+                <Setter Property="Foreground"
+                        Value="Indigo"/>
+                <Setter Property="Background"
+                        Value="Lavender"/>
             </Style>
             <Style TargetType="{x:Type CheckBox}">
                 <Setter Property="Padding"
@@ -47,7 +56,9 @@
                         Value="Center"/>
             </Style>
             <Style TargetType="{x:Type TextBox}">
-                <Setter Property="Padding"
+                <Setter Property="Margin"
+                        Value="10"/>
+                <Setter Property="FontSize"
                         Value="10"/>
                 <Setter Property="VerticalAlignment"
                         Value="Center"/>
@@ -67,6 +78,8 @@
                         Value="Center"/>
             </Style>
             <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="Margin"
+                        Value="10"/>
                 <Setter Property="VerticalAlignment"
                         Value="Center"/>
                 <Setter Property="HorizontalAlignment"
@@ -77,6 +90,8 @@
                         Value="Center"/>
                 <Setter Property="Width"
                         Value="150"/>
+                <Setter Property="Foreground"
+                        Value="Indigo"/>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -120,38 +135,48 @@
                 Content="Log out"
                 Grid.Row="4"
                 Grid.Column="1"/>
-        <!-- Screenshoter handler -->
-        <!--<Label Content="Choose folder:"
+        <Label Content="Choose file name:"
                Grid.Row="1"
                Grid.Column="2"/>
-        <TextBox Name="Folder"
-                 Grid.Row="1"
-                 Grid.Column="3"/>-->
-        <Label Content="Choose file name:"
-               Grid.Row="2"
-               Grid.Column="2"/>
         <TextBox Name="Filename"
-                 Grid.Row="2"
+                 Grid.Row="1"
                  Grid.Column="3"/>
         <Label Content="Add datetime:"
-               Grid.Row="3"
+               Grid.Row="2"
                Grid.Column="2"/>
         <CheckBox Name="Datetime"
-                  Grid.Row="3"
-                  Grid.Column="3"/>
+                  Grid.Row="2"
+                  Grid.Column="3"
+                  IsChecked="True"/>
         <Label Content="Choose folder:"
-               Grid.Row="4"
+               Grid.Row="3"
                Grid.Column="2"/>
         <ComboBox Name="ChooseFolder"
-                 Grid.Row="4"
+                 Grid.Row="3"
                  Grid.Column="3"
                  ItemsSource="{Binding Files}"
-                 SelectedIndex="0">
-            <ComboBox.ItemTemplate>
+                 SelectedIndex="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
+            <!--<ComboBox.ItemTemplate>
                 <DataTemplate>
                     <Label Content="{Binding Path=.}"/>
                 </DataTemplate>
-            </ComboBox.ItemTemplate>
+            </ComboBox.ItemTemplate>-->
         </ComboBox>
+        <RichTextBox x:Name="LogTextBox"
+                     TextChanged="LogTextBox_TextChanged"
+                     VerticalScrollBarVisibility="Visible"
+                     IsReadOnly="True"
+                     Grid.Row="5"
+                     Grid.Column="0"
+                     Grid.RowSpan="3"
+                     Grid.ColumnSpan="4"
+                     Margin="20"
+                     Foreground="DarkCyan">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
     </Grid>
 </Window>

@@ -3,11 +3,8 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace Google_Drive_Screenshoter
 {
@@ -31,39 +28,23 @@ namespace Google_Drive_Screenshoter
         {
 
             InitializeComponent();
+
+            // Login to Google account
             credential = DriveHandler.LoadCredentials(Scopes);
 
             // Create Drive API service.
-            service = new DriveService(new BaseClientService.Initializer()
+            if(credential != null)
             {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
+                service = new DriveService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName,
+                });
 
-            //// Define parameters of request.
-            //FilesResource.ListRequest listRequest = service.Files.List();
-            //listRequest.PageSize = 10;
-            //listRequest.Fields = "nextPageToken, files(id, name)";
-
-            //// List files.
-            //IList<Google.Apis.Drive.v3.Data.File> files = listRequest.Execute()
-            //    .Files;
-            //if (files != null && files.Count > 0)
-            //{
-            //    foreach (var file in files)
-            //    {
-            //        Console.WriteLine("{0} ({1})", file.Name, file.Id);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("No files found.");
-            //}
-            //Console.Read();
-
-            Username.Content = DriveHandler.PrintUsername(service);
-            Logo.Source = ImageHandler.LoadImage(DriveHandler.UserLogo(service));
-            ChooseFolder.ItemsSource = DriveHandler.FolderList(service);
+                Username.Content = DriveHandler.PrintUsername(service);
+                Logo.Source = ImageHandler.LoadImage(DriveHandler.UserLogo(service));
+                ChooseFolder.ItemsSource = DriveHandler.FolderList(service);
+            }
 
             //Instance of global keyboard hook to 
             SetupKeyboardHooks();
@@ -85,6 +66,7 @@ namespace Google_Drive_Screenshoter
                 ApplicationName = ApplicationName,
             });
             Username.Content = DriveHandler.PrintUsername(service);
+            ChooseFolder.ItemsSource = DriveHandler.FolderList(service);
             var userLogo = DriveHandler.UserLogo(service);
             if (userLogo == "" || userLogo == null)
                 Logo.Source = ImageHandler.TextImage(
@@ -104,29 +86,30 @@ namespace Google_Drive_Screenshoter
 
         private void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
         {
-            Debug.WriteLine(e.KeyboardData.VirtualCode);
+            Debug.WriteLine($"Pressed key: {e.KeyboardData.VirtualCode}");
 
             if (e.KeyboardData.VirtualCode != GlobalKeyboardHook.VkSnapshot)
                 return;
-
-            // seems, not needed in the life.
-            //if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.SysKeyDown &&
-            //    e.KeyboardData.Flags == GlobalKeyboardHook.LlkhfAltdown)
-            //{
-            //    MessageBox.Show("Alt + Print Screen");
-            //    e.Handled = true;
-            //}
-            //else
 
             if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
                 if(Username.Content.ToString() != "No selected account")
                 {
                     var filename = Screenshoter.MakeScreenshot(Filename.Text, Datetime.IsChecked.Value);
+                    Log($"Screenshot {filename} done");
                     var folderName = ChooseFolder.SelectedItem.ToString();
                     UploadScreenshot(filename, folderName);
+                    //if(filename != null)
+                    //{
+                    //    Log($"Screenshot {filename} done");
+                    //    var folderName = ChooseFolder.SelectedItem.ToString();
+                    //    UploadScreenshot(filename, folderName);
+                    //}
+                    //else
+                    //{
+                    //    Log($"[{System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")}]Screenshot failed!");
+                    //}
                 }
-                //MessageBox.Show("Print Screen");
                 e.Handled = true;
             }
         }
@@ -136,7 +119,7 @@ namespace Google_Drive_Screenshoter
             hook?.Dispose();
         }
 
-        public void UploadScreenshot(string filename, string folderName)
+        public async void UploadScreenshot(string filename, string folderName)
         {
             var fileMetadata = new File()
             {
@@ -148,23 +131,35 @@ namespace Google_Drive_Screenshoter
                 parents.Add(DriveHandler.FolderId(folderName, service));
                 fileMetadata.Parents = parents;
             }
-            Console.WriteLine(filename);
+            Debug.WriteLine(filename);
             FilesResource.CreateMediaUpload request;
             
             using (var stream = new System.IO.FileStream(filename,
                                     System.IO.FileMode.Open))
             {
-                Console.WriteLine(stream.Name);
+                Debug.WriteLine(stream.Name);
                 request = service.Files.Create(
                     fileMetadata, stream, "image/png");
                 request.Fields = "id";
-                request.Upload();
+                await request.UploadAsync();
             }
             var file = request.ResponseBody;
 
-            Console.WriteLine(filename);
-            Console.WriteLine("File ID: " + file.Id);
+            Log($"Screenshot {filename} uploaded to Google Drive folder {folderName}");
+            Debug.WriteLine(filename);
+            Debug.WriteLine("File ID: " + file.Id);
             System.IO.File.Delete(filename);
+        }
+
+        private void Log(string log)
+        {
+            LogTextBox.AppendText(log);
+            LogTextBox.AppendText("\n");
+        }
+
+        private void LogTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            LogTextBox.ScrollToEnd();
         }
     }
 }
