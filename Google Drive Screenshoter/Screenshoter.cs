@@ -3,8 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows;
 using System.IO;
-using System.Drawing.Imaging;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Google_Drive_Screenshoter
 {
@@ -14,6 +13,8 @@ namespace Google_Drive_Screenshoter
         private static double SCREEN_TOP = SystemParameters.VirtualScreenTop;
         private static double SCREEN_WIDTH = SystemParameters.VirtualScreenWidth;
         private static double SCREEN_HEIGHT = SystemParameters.VirtualScreenHeight;
+
+        public List<string> filesToUpload;
 
         public static string MakeScreenshot(string filename, bool date)
         {
@@ -34,7 +35,7 @@ namespace Google_Drive_Screenshoter
                     filename += ".png";
 
                     /*Check if the file exists - neccessary to avoid crash (screenshot without a date or captured a few within a second).*/
-                    CheckFilename(filename);
+                    filename = CheckFilename(filename);
 
                     graphics.CopyFromScreen(
                         (int)SCREEN_LEFT,

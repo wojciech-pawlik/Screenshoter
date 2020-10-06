@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_274C171E39734E9092BD7B1DEFB0F035"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -28,13 +22,7 @@
         "Entry"
         {
         "MsmKey" = "8:_34D2E8AB5C7706641F6D18FAD2ED5E06"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_34D2E8AB5C7706641F6D18FAD2ED5E06"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,31 +40,19 @@
         "Entry"
         {
         "MsmKey" = "8:_4E0817E3A14BC6B066CA7ACB34A15946"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4E0817E3A14BC6B066CA7ACB34A15946"
         "OwnerKey" = "8:_A4E6A2843F7A53336BD690DE4A73479A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4E0817E3A14BC6B066CA7ACB34A15946"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4E0817E3A14BC6B066CA7ACB34A15946"
         "OwnerKey" = "8:_34D2E8AB5C7706641F6D18FAD2ED5E06"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5217AE541469487F8559396CFCB2125F"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,37 +82,19 @@
         "Entry"
         {
         "MsmKey" = "8:_8CF27F43BDB7835493B057A8D2AA71F1"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8CF27F43BDB7835493B057A8D2AA71F1"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_94E771CECA86E6B6D2DEC3B13993FDFE"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_94E771CECA86E6B6D2DEC3B13993FDFE"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_994F091B833F9EE137E175635747B169"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_994F091B833F9EE137E175635747B169"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,25 +118,19 @@
         "Entry"
         {
         "MsmKey" = "8:_A4E6A2843F7A53336BD690DE4A73479A"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A4E6A2843F7A53336BD690DE4A73479A"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EDDD724CC618DCDE2DA2FB86A9F7EF05"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
+        "MsmKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_EDDD724CC618DCDE2DA2FB86A9F7EF05"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -190,13 +142,7 @@
         "Entry"
         {
         "MsmKey" = "8:_EE440E2C5FEEF14E7A03BF502331F1E3"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EE440E2C5FEEF14E7A03BF502331F1E3"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -226,13 +172,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_16EC7447FE834DC9BB18B91CBBFA6975"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5217AE541469487F8559396CFCB2125F"
+        "OwnerKey" = "8:_A64E34DB48B2435381AB505F6CE6BEB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -301,6 +241,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -317,6 +273,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -702,7 +666,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Screenshoter Setup"
         "ProductCode" = "8:{58BCB51E-4D17-4337-8AE7-66D2D9276E77}"
-        "PackageCode" = "8:{DEE4075A-274A-4272-A505-7FD0ABA13024}"
+        "PackageCode" = "8:{BE8DCB0E-D4AE-401B-9A71-CC3D8632F6FB}"
         "UpgradeCode" = "8:{6EADF77B-0E9A-4F42-9B04-AFF6A24DF153}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1221,7 +1185,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_16EC7447FE834DC9BB18B91CBBFA6975"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A64E34DB48B2435381AB505F6CE6BEB5"
             {
             "SourcePath" = "8:..\\Google Drive Screenshoter\\obj\\Debug\\Google Drive Screenshoter.exe"
             "TargetName" = "8:"
@@ -1242,34 +1206,6 @@
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5217AE541469487F8559396CFCB2125F"
-            {
-            "SourcePath" = "8:..\\Google Drive Screenshoter\\obj\\Debug\\Google Drive Screenshoter.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_13D8729BE6BA42EDBD841BBE16252412"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Debug|Any CPU"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{5CF8A9EE-6BED-433B-A73E-DB3BD0E06B7B}"
             "ShowKeyOutput" = "11:TRUE"
